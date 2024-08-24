@@ -1,0 +1,422 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #e0c3f1;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 1;
+}
+nav {
+    background: #1a062c;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .brand {
+    display: flex;
+    align-items: center;
+}
+nav .brand img {
+    height: 50px;
+    margin-right: 0.5rem;
+}
+nav .brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.hero-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.hero-title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem; /* Aumenta el tamaño del texto */
+    font-weight: bold; /* Aumenta el peso de la fuente para darle más presencia */
+    color: #fff;
+    margin: 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Aumenta la sombra del texto para mayor contraste */
+}
+
+.hero-buttons {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-buttons button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid mediumturquoise;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: mediumturquoise;
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente para ver el borde */
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.hero-buttons button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: lightblue;
+    z-index: -1;
+}
+
+.hero-buttons button:hover,
+.hero-buttons button:focus {
+    color: white;
+}
+
+.hero-buttons button:hover:before,
+.hero-buttons button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+.hero-buttons button:active {
+    transform: scale(0.9);
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6fa; /* Light purple background */
+    padding: 2rem; /* Adjust padding for more space */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    margin: 0; /* No margin to ensure full width */
+    border-radius: 8px;
+}
+.info-container h2 {
+    font-size: 3rem; /* Larger font size */
+    color: #6a0dad; /* Pastel purple color */
+    margin: 0;
+}
+.info-container p {
+    font-size: 1.25rem; /* Larger font size for description */
+    color: #333;
+    margin: 0;
+}
+.info-container img {
+    width: 300px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 2rem;
+}
+.new-header {
+    background-color: #d6a8f0; /* Pastel purple color */
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Agregado para posicionamiento */
+}
+
+.new-header .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+.new-header .text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Aumenta la separación entre tarjetas */
+    margin-top: 1rem;
+}
+.card-wrapper {
+    width: 300px;
+    height: 350px;
+    background: #ffd166; /* Color naranja */
+    color: #073b4c;
+    font-weight: 600;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    transition: all .5s ease;
+}
+.card-wrapper .card__image {
+    width: 100%;
+    height: 160px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    border-radius: 8px; /* Ajusta el radio del borde si es necesario */
+}
+.card-wrapper .card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+.card-wrapper .title {
+    font-weight: 800;
+    font-size: 1.4em;
+}
+.card-wrapper .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+.card-wrapper:hover {
+    border-top-left-radius: 35px;
+    box-shadow: 5px 5px 0px 0px #06d6a0, 10px 10px 0px 0px #118ab2, 15px 15px 0px 0px #06d6a0, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.card-wrapper:hover .card__image {
+    border-top-left-radius: 25px;
+}
+.description-container {
+    display: flex;
+    align-items: center;
+    background-color: #e0c3f1; /* Light purple background */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+.description-container img {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    margin-right: 2rem;
+}
+.description-container .text {
+    max-width: 600px; /* Adjust width as needed */
+}
+.description-container h3 {
+    font-size: 2rem;
+    color: #6a0dad; /* Pastel purple color */
+    margin: 0;
+}
+.description-container p {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0;
+}
+/* From Uiverse.io by Javierrocadev */
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* Añadir separación si es necesario */
+}
+.card {
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    background-color: #fffffe;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.card::before {
+    content: "";
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 3px solid #fefefe;
+    background: linear-gradient(40deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    transition: all 0.5s ease;
+}
+.card * {
+    z-index: 1;
+}
+.image {
+    width: 90px;
+    height: 90px;
+    background-color: #1468BF;
+    border-radius: 50%;
+    border: 4px solid #fefefe;
+    margin-top: 30px;
+    transition: all 0.5s ease;
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Para asegurar que la imagen siga siendo redonda */
+}
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card-info h4 {
+    font-size: 1.2rem;
+    color: #2D2D2D;
+    margin: 0;
+}
+.card-info p {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+}
+.card:hover::before {
+    background: linear-gradient(40deg, rgba(0,255,215,1) 0%, rgba(4,100,115,1) 50%, rgba(3,0,6,1) 100%);
+}
+/*contacto*/
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las secciones */
+    gap: 2rem; /* Espacio entre las secciones */
+    padding: 2rem;
+    margin: 2rem 0;
+    width: 90%;
+    max-width: 1000px; /* Asegura suficiente espacio para ambos divs */
+    box-sizing: border-box;
+    margin: 2rem auto; /* Centra el contenedor */
+}
+
+.contact-section {
+    background-color: #f9f9f9; /* Fondo blanco o gris claro */
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1; /* Permite que ambos divs ocupen espacio igual */
+    text-align: center; /* Centra el texto */
+}
+
+.contact-section h2 {
+    font-size: 1.8rem; /* Ajusta el tamaño del título */
+    color: #6a0dad; /* Color morado pastel */
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-email {
+    font-size: 1.1rem;
+    color: #6a0dad; /* Color morado pastel */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+/*social*/
+.social-media {
+    background-color: #e0c3f1; /* Fondo blanco o gris claro */
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre el texto y los íconos */
+    align-items: center; /* Alinea verticalmente el texto y los íconos */
+}
+
+.social-media h2 {
+    font-size: 2rem;
+    color: #6a0dad; /* Color morado pastel */
+    margin: 0; /* Elimina el margen para alineación precisa */
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem; /* Espacio entre los íconos */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px; /* Ajusta el tamaño de los íconos */
+    height: 40px; /* Ajusta el tamaño de los íconos */
+    font-size: 1.5rem; /* Ajusta el tamaño del ícono */
+    color: #333; /* Color de los íconos */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.social-icon:hover {
+    color: #6a0dad; /* Color al pasar el ratón por encima */
+}
+
+/*footer*/
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 1rem 0; /* Espaciado interno del footer */
+    position: relative; /* Asegura que el footer esté correctamente posicionado */
+    bottom: 0; /* Coloca el footer en la parte inferior */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    margin-top: 2rem; /* Espacio superior para separar del contenido previo */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen del párrafo para alineación precisa */
+}
